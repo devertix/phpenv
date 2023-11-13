@@ -1,0 +1,62 @@
+version: "2.1"
+
+services:
+  web82:
+    image: ghcr.io/devertix/phpenv:8.2
+    ports:
+      - "8082:80"
+    volumes:
+      - ".:/project/"
+    environment:
+      APACHE_RELATIVE_DOCROOT: public
+      XDEBUG_MODE: "develop,coverage,debug"
+
+  web81:
+    image: ghcr.io/devertix/phpenv:8.1
+    ports:
+      - "8081:80"
+    volumes:
+      - ".:/project/"
+    environment:
+      APACHE_RELATIVE_DOCROOT: public
+      XDEBUG_MODE: "develop,coverage,debug"
+
+  web80:
+    image: ghcr.io/devertix/phpenv:8.0
+    ports:
+      - "8080:80"
+    volumes:
+      - ".:/project/"
+    environment:
+      APACHE_RELATIVE_DOCROOT: public
+      XDEBUG_MODE: "develop,coverage,debug"
+
+  web74:
+    image: ghcr.io/devertix/phpenv:7.4
+    ports:
+      - "8074:80"
+    volumes:
+      - ".:/project/"
+    environment:
+      APACHE_RELATIVE_DOCROOT: public
+      XDEBUG_MODE: "develop,coverage,debug"
+
+  web73:
+    image: ghcr.io/devertix/phpenv:7.3
+    ports:
+      - "8073:80"
+    volumes:
+      - ".:/project/"
+    environment:
+      APACHE_RELATIVE_DOCROOT: public
+      XDEBUG_MODE: "develop,coverage,debug"
+
+  web72:
+    image: ghcr.io/devertix/phpenv:7.2
+    ports:
+      - "8072:80"
+    volumes:
+      - ".:/project/"
+    environment:
+      APACHE_RELATIVE_DOCROOT: public
+      XDEBUG_MODE: "develop,coverage,debug"
