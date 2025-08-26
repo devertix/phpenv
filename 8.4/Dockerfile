@@ -19,21 +19,21 @@ RUN LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php && \
     curl \
     apache2 \
     locales \
-    php8.2-cli \
-    php8.2-mbstring \
-    php8.2-xml \
-    php8.2-soap \
-    php8.2-curl \
-    php8.2-gd \
-    php8.2-bz2 \
-    php8.2-zip \
-    php8.2-mysql \
-    php8.2-fpm \
-    php8.2-sqlite3 \
-    php8.2-bcmath \
-    php8.2-intl \
-    php8.2-xdebug \
-    php8.2-redis \
+    php8.4-cli \
+    php8.4-mbstring \
+    php8.4-xml \
+    php8.4-soap \
+    php8.4-curl \
+    php8.4-gd \
+    php8.4-bz2 \
+    php8.4-zip \
+    php8.4-mysql \
+    php8.4-fpm \
+    php8.4-sqlite3 \
+    php8.4-bcmath \
+    php8.4-intl \
+    php8.4-xdebug \
+    php8.4-redis \
     mysql-client \
     imagemagick \
     && \
@@ -60,8 +60,8 @@ RUN chmod +x /start.sh && \
     mkdir -p /run/php && \
     chmod 777 /run/php && \
     echo "ServerName localhost" >> /etc/apache2/apache2.conf && \
-    echo "include=/dev/shm/fpm-user.conf" >> /etc/php/8.2/fpm/pool.d/www.conf && \
-    echo "clear_env = no" >> /etc/php/8.2/fpm/pool.d/www.conf
+    echo "include=/dev/shm/fpm-user.conf" >> /etc/php/8.4/fpm/pool.d/www.conf && \
+    echo "clear_env = no" >> /etc/php/8.4/fpm/pool.d/www.conf
 
 EXPOSE 80
 

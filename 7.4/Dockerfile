@@ -1,5 +1,5 @@
 FROM ubuntu:20.04
-MAINTAINER Norbert Mozsar <norbert.mozsar@devertix.com>
+LABEL maintainer="Norbert Mozsar <norbert.mozsar@devertix.com>"
 
 # apache
 RUN apt-get update && \
